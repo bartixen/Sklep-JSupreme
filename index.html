@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="pl_PL">
+<head>
+    <meta charset="UTF-8">
+    <title>Sklep JSupreme</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <h1>Sklep JSupreme</h1>
+    <form>
+        <p id="css_zamow">Tworzenie zamówienia</p>
+        <div>
+            <label for="input_imie">Podaj imię: </label>
+            <input type="text" name="input_imie" pattern="[A-z]{2,20}" id="input_imie" placeholder="Adam"><br><br>
+
+            <label for="input_nazwisko">Podaj nazwisko: </label>
+            <input type="text" name="input_nazwisko" id="input_nazwisko" pattern="[A-z]{2,30}" placeholder="Nowak"><br><br>
+
+            <label for="input_adres">Podaj adres: </label>
+            <input type="text" name="input_adres" id="input_adres" placeholder="Polna 13/13a, 97-300 Piotrków Trybunalski"><br><br>
+
+            <label for="input_email">Podaj email: </label>
+            <input type="email" name="input_email" id="input_email" placeholder="kontakt@teb.pl">
+        </div>
+        <hr>
+        <p>Produkty: <button id="dodaj">Dodaj (max 5)</button></p>
+        <div id="selekty">
+
+        </div>
+        <br>
+        <hr>
+        <div>
+            <input type="checkbox" id="checkbox_wysylka"><label for="checkbox_wysylka"> wysyłka +15zł</label><br>
+            <input type="checkbox" id="checkbox_prezent"><label for="checkbox_prezent"> opakowanie na prezent +40zł</label><br>
+            <input type="checkbox" id="checkbox_bandana"><label for="checkbox_bandana"> dodatkowa bandana +25zł</label>
+        </div>
+        <div>
+            <p>Zgoda na logo producenta (-5%)
+            <br>
+                <input type="radio" name="logo" id="logo" value="1" checked>
+                <label for="logo">✔</label>
+                
+                <input type="radio" name="logo" id="logo1" value="0">
+                <label for="logo1">🗙</label>
+            </p>
+        </div>
+        <button id="wyslij">Wyślij</button><br><br>
+    </form>
+    <p id="zamowienie"></p>
+    <script src="script.js"></script>
+</body>
+</html>
